@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常中的一份对照 · 九游娱乐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf6f0;
+            font-family: system-ui, 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            color: #2e2b27;
+            line-height: 1.75;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fffcf8;
+            padding: 2.8rem 2.5rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        @media (max-width: 580px) {
+            body { padding: 1.5rem 1rem; }
+            .wrap { padding: 1.8rem 1.2rem; border-radius: 20px; }
+        }
+
+        /* 开场短句 — 一小段话 */
+        .opening {
+            font-size: 1.15rem;
+            letter-spacing: 0.02em;
+            color: #4d4540;
+            margin-bottom: 2.2rem;
+            padding-left: 1rem;
+            border-left: 3px solid #d6c8b8;
+            font-style: normal;
+        }
+
+        .opening strong {
+            font-weight: 500;
+            color: #7b5f4c;
+        }
+
+        /* 一级标题（用于文章节奏，不用大 hero） */
+        .title-marker {
+            font-size: 1.6rem;
+            font-weight: 450;
+            color: #3f352e;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: 0.02em;
+            border-bottom: 1px solid #e9dfd4;
+            padding-bottom: 0.5rem;
+        }
+
+        .title-marker:first-of-type {
+            margin-top: 0;
+        }
+
+        .para {
+            margin-bottom: 1.4rem;
+            text-align: justify;
+        }
+
+        .para a {
+            color: #7c5f48;
+            text-decoration: none;
+            border-bottom: 1px dashed #ccbcaa;
+            transition: border-color 0.2s, background 0.1s;
+        }
+
+        .para a:hover {
+            border-bottom: 1px solid #7c5f48;
+            background: #f8f0e6;
+        }
+
+        /* 引用块 / 提示框 — 温和的卡片 */
+        .insight-box {
+            background: #f4ede6;
+            border-left: 5px solid #bfa990;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0 2rem;
+            border-radius: 12px 4px 4px 12px;
+            font-size: 0.98rem;
+        }
+
+        .insight-box p {
+            margin: 0.3rem 0;
+        }
+
+        .insight-box .label {
+            font-weight: 530;
+            letter-spacing: 0.3px;
+            color: #5a4a3c;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* 特点列表 — 描述式，不单调 */
+        .gentle-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.4rem 0 1.8rem;
+        }
+
+        .gentle-list li {
+            padding: 0.7rem 0 0.7rem 2rem;
+            position: relative;
+            border-bottom: 1px solid #eee5db;
+        }
+
+        .gentle-list li:last-child {
+            border-bottom: none;
+        }
+
+        .gentle-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.6rem;
+            top: 0.7rem;
+            color: #b59c86;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .gentle-list strong {
+            font-weight: 500;
+            color: #5f4b3a;
+        }
+
+        /* FAQ 摘要 — 简短问题样式 */
+        .faq-mini {
+            margin-top: 2.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2d6c9;
+        }
+
+        .faq-item {
+            margin-bottom: 1.1rem;
+        }
+
+        .faq-item .q {
+            font-weight: 460;
+            color: #4c3f35;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        .faq-item .a {
+            padding-left: 1rem;
+            color: #5b5149;
+            font-size: 0.97rem;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            text-align: left;
+            font-size: 0.92rem;
+            color: #7d7268;
+            border-top: 1px dashed #d9cdbf;
+            padding-top: 1.6rem;
+        }
+
+        .footer-note a {
+            color: #6e5b4b;
+            text-decoration: none;
+            border-bottom: 1px dotted #b7a694;
+        }
+
+        .footer-note a:hover {
+            border-bottom: 1px solid #6e5b4b;
+        }
+
+        /* 温和按钮 — 几乎不使用，但保留一个作为点缀 */
+        .soft-link {
+            display: inline-block;
+            background: #ede4d9;
+            color: #4a3e35;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            margin: 0.1rem 0;
+            border: 1px solid #d8cbbc;
+            transition: background 0.15s;
+        }
+
+        .soft-link:hover {
+            background: #e0d4c5;
+            border-color: #c2b09b;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <!-- 开场短句 -->
+    <div class="opening">
+        <strong>查询</strong>有时候是顺着一个名字往下走，<br>
+        走到一半，才发现自己已经在对照、延伸、翻看更多。
+    </div>
+
+    <!-- 引入主题，自然嵌入链接 -->
+    <p class="para">
+        那天下午，我打开浏览器，想在搜索引擎里确认一条活动的描述——不是什么要紧事，只是想把印象里的图标和文字对一下。输入框里刚打出「九游」两个字，下拉联想就带出了一串熟悉的字眼。我点了第一条，进入了一个叫<a href="https://index--jiuyou.com">九游娱乐</a>的页面。说实话，我原本只想看一眼简介就关掉，但后来却滑动着读了好几屏。
+    </p>
+
+    <p class="para">
+        页面的排版很干净，没有那种铺面而来的压迫感。我注意到它把内容分成了几个自然的部分，不像一些站点那样恨不得把所有信息都塞进第一屏。这种节奏感让人愿意停留，也让我联想到自己平时做资料搜集的习惯——先找落脚点，再慢慢看细处。
+    </p>
+
+    <!-- 承接段落 – 日常对照的角度 -->
+    <div class="title-marker">对照 · 一条一条看过去</div>
+
+    <p class="para">
+        我把自己常留意的一些小点列在纸上，然后对照着这个页面里的描述，一条一条核实。不是查对错，更像是“哦，这里是这样说的”那种确认。下面这几点是我觉得比较有代表性、也适合分享出来的：
+    </p>
+
+    <ul class="gentle-list">
+        <li><strong>信息分区清晰</strong> —— 页面没有把文字全部堆在一起，而是用标题和段落把不同主题隔开，适合快速扫读，也适合逐段精读。</li>
+        <li><strong>语气不紧不慢</strong> —— 读起来像一个人在跟你慢慢聊，没有太多感叹号或催促式的措辞，这对习惯安静浏览的人来说很友好。</li>
+        <li><strong>结构有层次</strong> —— 从概括到具体，再到一些延伸的提示，内容之间的过渡平滑，不会忽然跳到不相关的话题上。</li>
+        <li><strong>链接自然嵌入</strong> —— 比如在句子中提到的 <a href="https://index--jiuyou.com">九游娱乐</a>，不会显得生硬，更像是在叙述过程中顺手带出来。</li>
+    </ul>
+
+    <!-- 引用块 / 提示框 -->
+    <div class="insight-box">
+        <span class="label">📋 一次延伸阅读的笔记</span>
+        <p>如果只是粗略看一眼，那可能三秒钟就滑过去了。但若是带着“我想了解一下这个页面是怎么组织的”这种心态，就能发现很多细节。建议你也试试：先看标题结构，再读段落收尾，最后留意那些被放进句子中的链接——它们往往是最自然的信息入口。</p>
+    </div>
+
+    <!-- 场景 + 温和的FAQ 摘要 -->
+    <div class="title-marker">几个常见的念头 · 简短 FAQ</div>
+
+    <p class="para">
+        下面这几条是从我自己的笔记里摘出来的，也是我在浏览时反复想到的问题。不一定有标准答案，但可以作为继续阅读的线索：
+    </p>
+
+    <div class="faq-mini">
+        <div class="faq-item">
+            <span class="q">—— 这个页面主要想传递什么？</span>
+            <span class="a">更像是一份结构清晰的介绍，而不是浓烈的广告。它试图让人在了解的同时，保持自己的判断节奏。</span>
+        </div>
+        <div class="faq-item">
+            <span class="q">—— 为什么要在句子中放链接？</span>
+            <span class="a">因为这样更接近日常说话的习惯。比如你读到“最近在了解<a href="https://index--jiuyou.com">九游娱乐</a>”时，会自然觉得这是上下文的一部分，而不是被硬拽着去点击。</span>
+        </div>
+        <div class="faq-item">
+            <span class="q">—— 这种风格适合什么场合？</span>
+            <span class="a">适合想安安静静对照信息的时候，也适合作为延伸阅读的起点。没有太多干扰，注意力能集中在文字本身。</span>
+        </div>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="title-marker">不着急，慢慢看</div>
+
+    <p class="para">
+        合上笔记本之前，我又回头看了两眼那个页面。屏幕上还是那一行一行的文字，安安静静地待在那里，好像在说：你可以随时回来接着看。我想，这就是一份好的介绍页该有的样子——不催你，不推你，只是把内容摆好，等你愿意的时候，再慢慢对照、延伸、阅读。
+    </p>
+
+    <p class="para">
+        也许下一次，你再看到<a href="https://index--jiuyou.com">九游娱乐</a>这个名字时，脑海里浮现的就不只是一个名字，而是一段安静的阅读时光。
+    </p>
+
+    <!-- 底部小注 -->
+    <div class="footer-note">
+        <span>—— 写于一个翻书般的下午 · 不设限的延伸</span>
+        <span style="display: inline-block; margin-left: 1.5rem; font-size: 0.88rem; color: #b5a392;">灵感种子 · 1f95ec5db06a9941</span>
+    </div>
+
+</div>
+</body>
+</html>
